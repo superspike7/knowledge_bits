@@ -26,9 +26,9 @@
     <nav class="flex w-full h-32 justify-between px-24 items-center">
       <h1 class="md:text-5xl text-2xl text-primary font-black">Knowledge Bits</h1>
       <ul class="flex md:text-2xl text-xl gap-4">
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#Home">Explore</a></li>
-        <li><a class="bg-primary text-gray-100 p-2 rounded-xl" href="#Home">Share</a></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Explore", bits_path %></li>
+        <li> <%= link_to "Explore", new_bit_path, class: "bg-primary text-gray-100 p-2 rounded-xl" %></li>
       </ul>
     </nav>
 
