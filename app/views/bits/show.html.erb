@@ -3,5 +3,14 @@
 >
   <h1 class="text-5xl font-bold"><%= @bit.title %></h1>
   <h3 class="text-2xl font-bold text-gray-500">Author: <%= @bit.author %></h3>
+  <div class="flex gap-4">
+    <%= link_to edit_bit_path(@bit) do %>
+      <%= vite_image_tag 'images/edit.png', class: "w-12 h-12" %>
+    <% end %>
+
+    <%= link_to bit_path(@bit), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+     <%= vite_image_tag 'images/delete.png', class: "w-12 h-12" %>
+    <% end %>
+  </div>
   <div class="bg-background rounded-[40px] p-8 text-2xl whitespace-pre-line"><%= @bit.body %></div>
 </div>
