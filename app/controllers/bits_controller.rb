@@ -13,6 +13,7 @@ class BitsController < ApplicationController
   end
 
   def edit
+    @bit = Bit.find(params[:id])
   end
 
   def create
@@ -26,6 +27,13 @@ class BitsController < ApplicationController
   end
 
   def update
+    @bit = Bit.find(params[:id])
+
+    if @bit.update(bit_params)
+      redirect_to @bit
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy

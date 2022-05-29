@@ -12,7 +12,9 @@
         </div>
         <div class="h-16 border-t border-t-primary w-[75%] grid grid-cols-3 items-center place-items-center">
           <div class="shrink-0">
-            <a href="#"> <%= vite_image_tag 'images/edit.png', class: "w-12 h-12" %> </a>
+            <%= link_to edit_bit_path(bit) do %>
+              <%= vite_image_tag 'images/edit.png', class: "w-12 h-12" %>
+            <% end %>
           </div>
           <div class="shrink-0 w-28 flex justify-center border-x border-x-primary">
             <%= link_to bit_path(bit) do %>
