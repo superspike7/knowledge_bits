@@ -22,7 +22,9 @@
             <% end %>
           </div>
           <div class="shrink-0">
-            <a href="#"> <%= vite_image_tag 'images/delete.png', class: "w-12 h-12" %> </a>
+            <%= link_to bit_path(bit), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+             <%= vite_image_tag 'images/delete.png', class: "w-12 h-12" %>
+            <% end %>
           </div>
         </div>
       </div>

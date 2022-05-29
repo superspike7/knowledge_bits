@@ -37,6 +37,10 @@ class BitsController < ApplicationController
   end
 
   def destroy
+    @bit = Bit.find(params[:id])
+    @bit.destroy
+
+    redirect_to bits_url, status: :see_other
   end
 
   private
