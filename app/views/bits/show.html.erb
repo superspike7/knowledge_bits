@@ -1,14 +1,7 @@
 <div
   class="bg-white border border-primary rounded-[50px] w-[60%] mx-auto p-20 flex flex-col gap-4 mt-20"
 >
-  <h1 class="text-5xl font-bold">Rails Generator Commands</h1>
-  <h3 class="text-2xl font-bold text-gray-500">Author: Spike Vinz</h3>
-  <div class="bg-background rounded-[40px] p-8 text-2xl whitespace-pre-line">
-    You can list all the rails generator commands just type this in the
-    commandline: 
-
-    `$ bin/rails generate` or just `$ bin/rails g` 
-
-    This is helpful if you forgot some commands or trying out new ones.
-  </div>
+  <h1 class="text-5xl font-bold"><%= @bit.title %></h1>
+  <h3 class="text-2xl font-bold text-gray-500">Author: <%= @bit.author %></h3>
+  <div class="bg-background rounded-[40px] p-8 text-2xl whitespace-pre-line"><%= @bit.body %></div>
 </div>
